@@ -5,7 +5,7 @@ import { PerlinNoise } from './perlin';
 
 export const unusedExport = "this is just here to disable fast refresh hopefully";
 
-var scene:any;
+var scene:THREE.Scene;
 
 
 function moveWave() {
@@ -65,7 +65,7 @@ setTimeout(() => {
     };
 }, 20);
 var wave:Wave = new Wave(250,250,64,64,35), spotLight2:any;
-var scene = new THREE.Scene();
+var scene:THREE.Scene = new THREE.Scene();
 var waveIndex:number = 1;
 
 function animate(){

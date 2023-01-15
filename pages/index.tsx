@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 // export var animationEntities = new Map<string,boolean>();
 
-function Card({text, link}) {
+function Card({text, link} : {text:string, link:string}) {
     return (
         <a href={link}>
             <div className="m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden">
