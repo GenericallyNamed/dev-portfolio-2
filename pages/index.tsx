@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
@@ -7,15 +8,28 @@ import { WaveBG, wave, pointLight } from '../components/bg';
 
 const inter = Inter({ subsets: ['latin'] })
 
+function hoverGlow(e:React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    // console.log("mouse moved!");
+    // console.log(e);
+    var card:any = e.target;
+    var glow = card.querySelector(".special-glow");
+    var x_displacement = e.pageX - (card.getBoundingClientRect().left + window.scrollX) - (card.offsetWidth * 0.3);
+    var y_displacement = e.pageY - (card.getBoundingClientRect().top + window.scrollY) - (card.offsetHeight * 0.45);
+    glow.style.top = y_displacement + "px";
+    glow.style.left = x_displacement + "px";
+    console.log(e.pageX + "," + e.pageY + " AND " + card.pageX + "," + card.pageY + " AND " + x_displacement + "," + y_displacement);
+
+
+}
 // export var animationEntities = new Map<string,boolean>();
 
 function Card({text, link} : {text:string, link:string}) {
     return (
         <a href={link}>
-            <div className="m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden">
+            <div className="landing-card m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden" onMouseMove={hoverGlow}>
                 <div className="relative border border-[rgb(190,190,190)] shadow-[0_0_20px_0.5px_rgba(255,255,255,0.1)] rounded-md bg-[rgb(25,25,25)] h-full">
-                    <div className="w-64 h-64 bg-[rgb(40,40,40)] blur-3xl absolute top-0 left-0"></div>
-                    <h2 className="Franklin text-4xl font-semibold relative pl-6 pt-5">{text}</h2>
+                    <div className="transition pointer-events-none special-glow w-64 h-64 bg-[rgb(40,40,40)] blur-3xl absolute top-0 left-0"></div>
+                    <h2 className="pointer-events-none Franklin text-4xl font-semibold relative pl-6 pt-5">{text}</h2>
                 </div>
             </div>
         </a>
@@ -62,4 +76,4 @@ export default function Home() {
 
 setTimeout(() => {
     WaveBG(wave);
-},300);
+},50);
