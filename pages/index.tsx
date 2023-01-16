@@ -104,12 +104,12 @@ export default function Home() {
                     coding / utility / entertainment
                 </h2>
                 <div className="ml-auto mr-auto select-none w-[56rem] h-[1290px] max-w-[95vw] rounded-md grid" style={{gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))", gridTemplateRows:"repeat(auto-fill,minmax(240px,1.2fr))", rowGap:"15px", columnGap:"15px"}}>
-                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextJS",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="/"/>
+                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextjs13",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="/"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="nlp-translator" link="/"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"mongoDB",color:"green"}]} text="a-bot370" link="https://github.com/rramboer/A-Bot"/>
-                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"mongoDB",color:"green"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
+                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"algorithms",color:"purple"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"css",color:"gray"}]} text="modernripple" link="https://github.com/GenericallyNamed/ripple-effect"/>
-                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"mongoDB",color:"green"}]} text="freestuffclub" link="https://freestuffclub.neocities.org"/>
+                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"threeJS",color:"orange"}]} text="freestuffclub" link="https://freestuffclub.neocities.org"/>
                     <Card tags={[{name:"playable",color:"red"},{name:"minecraft",color:"blue"}]} text="missingsandwich2" link="https://www.minecraftmaps.com/adventure-maps/the-missing-sandwich-ii"/>
                     <Card tags={[{name:"playable",color:"red"},{name:"minecraft",color:"blue"}]} text="annoyingghosts" link="https://www.youtube.com/watch?v=-4NOqVSOTAM"/>
                 </div>
