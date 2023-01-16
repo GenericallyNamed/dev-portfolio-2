@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import { WaveBG, wave, pointLight } from '../components/bg';
+import { randomUUID } from 'crypto';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -60,7 +61,7 @@ function Tags({tags}:{tags:{name:string, color:string}[]}) {
     return (
         <div className="absolute bottom-0 pointer-events-none flex-row flex ml-5 mb-5">
         {
-            tags.map((tag:{name:string,color:string}) => (<div style={{background:(tag.color)}} className="pointer-events-none font-mono  rounded-sm p-1 mr-2">{tag.name}</div>))
+            tags.map((tag:{name:string,color:string}) => (<div key={(tag.name)} style={{background:(tag.color)}} className="pointer-events-none font-mono  rounded-sm p-1 mr-2">{tag.name}</div>))
         }
         </div>
     );
@@ -127,12 +128,12 @@ setTimeout(() => {
 function blinkCharacter() {
     let cursor:HTMLParagraphElement = (document.querySelector(".blinkingCursor") as HTMLParagraphElement);
     cursor?.classList.toggle("blink");
-    if(cursor?.classList.contains("blink")) {
+    if(cursor !== null && cursor?.classList.contains("blink")) {
         cursor.style.color = "#1f3a87";
         // setTimeout(() => {
         //     blinkCharacter();
         // }, 400);
-    } else {
+    } else if(cursor !== null) {
         cursor.style.color = "#d1d5db";
         // setTimeout(() => {
         //     blinkCharacter();
@@ -144,6 +145,6 @@ function blinkCharacter() {
     }, 800);
 
 }
-setTimeout(() => {
+setTimeout(function() {
     blinkCharacter();
 }, 1000);
