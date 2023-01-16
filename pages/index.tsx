@@ -69,7 +69,7 @@ function Tags({tags}:{tags:{name:string, color:string}[]}) {
 function Card({text, link, tags} : {text:string, link:string, tags:{name:string, color:string}[]}) {
     return (
         <a href={link}>
-            <div className=" relative landing-card m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden" onMouseMove={hoverGlow} onMouseLeave={hoverEnd}>
+            <div className="rounded-md relative landing-card m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden" onMouseMove={hoverGlow} onMouseLeave={hoverEnd}>
                 <div className="relative border border-[rgb(190,190,190)] shadow-[0_0_20px_0.5px_rgba(255,255,255,0.1)] rounded-md bg-[rgb(25,25,25)] h-full">
                     <div className="transition pointer-events-none special-glow w-64 h-64 bg-[rgb(40,40,40)] blur-3xl absolute top-0 left-0"></div>
                     <h2 className="pointer-events-none Franklin text-4xl font-semibold relative pl-6 pt-5">{text}</h2>
@@ -104,7 +104,7 @@ export default function Home() {
                 </h2>
                 <div className="ml-auto mr-auto select-none w-[56rem] h-[1290px] max-w-[95vw] rounded-md grid" style={{gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))", gridTemplateRows:"repeat(auto-fill,minmax(240px,1.2fr))", rowGap:"15px", columnGap:"15px"}}>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextJS",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="/"/>
-                    <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="portfolio" link="/"/>
+                    <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="nlp-translator" link="/"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"mongoDB",color:"green"}]} text="a-bot370" link="https://github.com/rramboer/A-Bot"/>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"mongoDB",color:"green"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"css",color:"gray"}]} text="modernripple" link="https://github.com/GenericallyNamed/ripple-effect"/>
