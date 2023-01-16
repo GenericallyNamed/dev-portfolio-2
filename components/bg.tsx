@@ -48,6 +48,7 @@ var renderer:any,
 setTimeout(() => {
     specialCanvas = document.querySelector("#special-canvas") as HTMLCanvasElement;
     renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, canvas: specialCanvas});
+    // renderer.setClearColor(0x080808,0);
     camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 500);
     dCamera = new THREE.OrthographicCamera(window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 1000 );
     canvas = renderer.domElement;
@@ -66,6 +67,7 @@ setTimeout(() => {
 }, 20);
 var wave:Wave = new Wave(250,250,64,64,35), spotLight2:any;
 var scene:THREE.Scene = new THREE.Scene();
+scene.background = new THREE.Color(0x080808);
 var waveIndex:number = 1;
 
 function animate(){
