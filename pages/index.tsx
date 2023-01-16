@@ -38,9 +38,9 @@ function hoverEnd(e:React.MouseEvent<HTMLDivElement, MouseEvent>) {
 
 function Footer() {
     return(
-        <div className="w-screen h-48 bg-gray-800">
+        <div className="footer w-screen h-48 bg-gray-800 cursor-default">
             <div className="backdrop-blur-lg rounded-md border border-blue-700 p-2 ml-auto mr-auto max-w-2xl w-[56rem] bg-blue-900 h-[100%] opacity-100 relative top-[-40px] text-gray-300 self-center justify-self-center place-self-center font-mono">
-                <p><span className="text-green-500">user@server</span>:<span className="text-blue-400">~</span>$ ./footer .</p>
+                <p><span className="text-green-500">user@server</span>:<span className="text-blue-400">~</span>$ ./footer</p>
                     {"this is a footer"}
                     <p>click a link if you dare...</p>
                     <p>&zwnj;</p>
@@ -49,6 +49,8 @@ function Footer() {
                     <a className="underline" href="https://github.com/genericallynamed">{"github"}</a> <a className="underline" href="https://www.linkedin.com/in/alexshandilis/">{"linkedin"}</a> <a className="underline" href="https://github.com/GenericallyNamed/dev-portfolio-2">{"source-code"}</a> <a className="underline" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">{"funny"}</a>
                 </span>
                 </p>
+                <p>&zwnj;</p>
+                <p className="blinkingCursor select-none">█</p>
             </div>
         </div>
     );
@@ -101,7 +103,8 @@ export default function Home() {
                     coding / utility / entertainment
                 </h2>
                 <div className="ml-auto mr-auto select-none w-[56rem] h-[1290px] max-w-[95vw] rounded-md grid" style={{gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))", gridTemplateRows:"repeat(auto-fill,minmax(240px,1.2fr))", rowGap:"15px", columnGap:"15px"}}>
-                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextJS",color:"black"}]} text="portfolio" link="/"/>
+                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextJS",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="/"/>
+                    <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="portfolio" link="/"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"mongoDB",color:"green"}]} text="a-bot370" link="https://github.com/rramboer/A-Bot"/>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"mongoDB",color:"green"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"css",color:"gray"}]} text="modernripple" link="https://github.com/GenericallyNamed/ripple-effect"/>
@@ -120,3 +123,27 @@ export default function Home() {
 setTimeout(() => {
     WaveBG(wave);
 },50);
+
+function blinkCharacter() {
+    let cursor:HTMLParagraphElement = (document.querySelector(".blinkingCursor") as HTMLParagraphElement);
+    cursor?.classList.toggle("blink");
+    if(cursor?.classList.contains("blink")) {
+        cursor.style.color = "#1f3a87";
+        // setTimeout(() => {
+        //     blinkCharacter();
+        // }, 400);
+    } else {
+        cursor.style.color = "#d1d5db";
+        // setTimeout(() => {
+        //     blinkCharacter();
+        // }, 800);
+    }
+        
+    setTimeout(() => {
+        blinkCharacter();
+    }, 800);
+
+}
+setTimeout(() => {
+    blinkCharacter();
+}, 1000);

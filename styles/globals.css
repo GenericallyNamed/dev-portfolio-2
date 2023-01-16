@@ -22,7 +22,15 @@ body {
 span > a:hover {
   background:#c8ccd3;
   color:#1f3983;
+}
 
+.footer > * ::selection {
+  background:#d1d5db;
+  color:#1f3a87;
+}
+.footer > ::selection {
+  background:#d1d5db;
+  color:#1f3a87;
 }
 
 :root {
