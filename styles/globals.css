@@ -15,6 +15,15 @@ body {
 .landing-card:not(:hover) > div > .special-glow {
   opacity:0;
 }
+.landing-card {
+  transition: transform 0.3s ease;
+}
+
+span > a:hover {
+  background:#c8ccd3;
+  color:#1f3983;
+
+}
 
 :root {
   --max-width: 1100px;

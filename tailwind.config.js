@@ -15,6 +15,7 @@ module.exports = {
         violet: colors.violet,
         black: colors.black,
         yellow: colors.yellow,
+        green: colors.green,
         dg: {
             '1000':"#0a0a0a",
             '900': "#1a1a1a",
