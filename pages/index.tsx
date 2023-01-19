@@ -107,7 +107,7 @@ export default function Home() {
                     <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="nlp-translator" link="https://github.com/GenericallyNamed/f22_translator_flask_heroku_tutorial"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"mongoDB",color:"green"},{name:"node.js",color:"black"}]} text="a-bot370" link="https://github.com/rramboer/A-Bot"/>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"algorithms",color:"purple"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
-                    <Card tags={[{name:"javascript",color:"black"},{name:"css",color:"gray"}]} text="modernripple" link="https://github.com/GenericallyNamed/ripple-effect"/>
+                    <Card tags={[{name:"javascript",color:"black"},{name:"css",color:"gray"}]} text="ripple.js" link="https://github.com/GenericallyNamed/ripple-effect"/>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"threeJS",color:"orange"}]} text="freestuffclub" link="https://freestuffclub.neocities.org"/>
                     <Card tags={[{name:"playable",color:"red"},{name:"minecraft",color:"blue"}]} text="missingsandwich2" link="https://www.minecraftmaps.com/adventure-maps/the-missing-sandwich-ii"/>
                     <Card tags={[{name:"playable",color:"red"},{name:"minecraft",color:"blue"}]} text="annoyingghosts" link="https://www.youtube.com/watch?v=-4NOqVSOTAM"/>
