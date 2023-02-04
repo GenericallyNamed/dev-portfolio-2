@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import styles from '@/styles/Home.module.css';
+// import styles from '@/styles/Home.module.css';
 import { WaveBG, wave, pointLight } from '../components/bg';
 
 
@@ -38,7 +38,7 @@ function hoverEnd(e:React.MouseEvent<HTMLDivElement, MouseEvent>) {
 
 function Footer() {
     return(
-        <div className="footer w-screen h-48 bg-gray-800 cursor-default">
+        <div className="footer w-screen h-48 bg-gray-800 cursor-default text-white">
             <div className="backdrop-blur-lg rounded-md border border-blue-700 p-2 ml-auto mr-auto max-w-2xl w-[56rem] bg-blue-900 h-[100%] opacity-100 relative top-[-40px] text-gray-300 self-center justify-self-center place-self-center font-mono">
                 <p><span className="text-green-500">user@server</span>:<span className="text-blue-400">~</span>$ ./footer</p>
                     {"this is a footer"}
@@ -60,7 +60,7 @@ function Tags({tags}:{tags:{name:string, color:string}[]}) {
     return (
         <div className="absolute bottom-0 pointer-events-none flex-row flex ml-5 mb-5">
         {
-            tags.map((tag:{name:string,color:string}) => (<div key={(tag.name)} style={{background:(tag.color)}} className="pointer-events-none font-mono  rounded-sm p-1 mr-2">{tag.name}</div>))
+            tags.map((tag:{name:string,color:string}) => (<div key={(tag.name)} style={{background:(tag.color)}} className="text-white pointer-events-none font-mono  rounded-sm p-1 mr-2">{tag.name}</div>))
         }
         </div>
     );
@@ -72,7 +72,7 @@ function Card({text, link, tags} : {text:string, link:string, tags:{name:string,
             <div className="rounded-md relative landing-card m-4 w-[100%] h-[100%] cursor-pointer justify-self-center overflow-hidden" onMouseMove={hoverGlow} onMouseLeave={hoverEnd}>
                 <div className="relative border border-[rgb(190,190,190)] shadow-[0_0_20px_0.5px_rgba(255,255,255,0.1)] rounded-md bg-[rgb(25,25,25)] h-full">
                     <div className="transition pointer-events-none special-glow w-64 h-64 bg-[rgb(40,40,40)] blur-3xl absolute top-0 left-0"></div>
-                    <h2 className="pointer-events-none Franklin text-4xl font-semibold relative pl-6 pt-5">{text}</h2>
+                    <h2 className="text-white pointer-events-none Franklin text-4xl font-semibold relative pl-6 pt-5">{text}</h2>
                     <Tags tags={tags}/>
                 </div>
             </div>
@@ -96,10 +96,10 @@ export default function Home() {
                 <canvas id="special-canvas"></canvas>
             </div>
             <div className="absolute top-12 left-[50%] translate-x-[-50%]">
-                <h1 className="relative Baskerville font-extrabold text-4xl text-center select-none">
+                <h1 className="text-white relative Baskerville font-extrabold text-4xl text-center select-none">
                 Alex Shandilis
                 </h1>
-                <h2 className="relative mt-96 text-center Baskerville font-semibold select-none">
+                <h2 className="text-white relative mt-96 text-center Baskerville font-semibold select-none">
                     coding / utility / entertainment
                 </h2>
                 <div className="ml-auto mr-auto select-none w-[56rem] h-[1290px] max-w-[95vw] rounded-md grid" style={{gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))", gridTemplateRows:"repeat(auto-fill,minmax(240px,1.2fr))", rowGap:"15px", columnGap:"15px"}}>
