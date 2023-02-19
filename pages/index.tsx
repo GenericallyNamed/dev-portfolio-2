@@ -103,7 +103,7 @@ export default function Home() {
                     coding / utility / entertainment
                 </h2>
                 <div className="ml-auto mr-auto select-none w-[56rem] h-[1290px] max-w-[95vw] rounded-md grid" style={{gridTemplateColumns:"repeat(auto-fill,minmax(290px,1fr))", gridTemplateRows:"repeat(auto-fill,minmax(240px,1.2fr))", rowGap:"15px", columnGap:"15px"}}>
-                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextjs13",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="/"/>
+                    <Card tags={[{name:"typescript",color:"#007acc"},{name:"tailwind",color:"#52a8ac"},{name:"nextjs13",color:"black"},{name:"netlify",color:"blue"}]} text="portfolio" link="https://github.com/GenericallyNamed/dev-portfolio-2"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"python",color:"rgb(250,130,150)"},{name:"heroku",color:"blue"},{name:"flask",color:"grey"}]} text="nlp-translator" link="https://github.com/GenericallyNamed/f22_translator_flask_heroku_tutorial"/>
                     <Card tags={[{name:"javascript",color:"black"},{name:"mongoDB",color:"green"},{name:"node.js",color:"black"}]} text="a-bot370" link="https://github.com/rramboer/A-Bot"/>
                     <Card tags={[{name:"typescript",color:"#007acc"},{name:"algorithms",color:"purple"}]} text="pathstar" link="https://pathstar.shandilis.dev"/>
